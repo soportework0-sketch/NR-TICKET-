@@ -1,0 +1,102 @@
+{
+    "ticket_created": "🎫 Tu ticket ha sido creado correctamente.",
+    "ticket_closed": "🔒 Este ticket ha sido cerrado.",
+    "ticket_claimed": "🛠️ Este ticket ha sido reclamado por {user}.",
+
+    "no_permission": "❌ No tienes permisos para realizar esta acción.",
+    "language_changed": "🌐 Idioma cambiado correctamente.",
+    "not_authenticated": "🔐 Debes iniciar sesión.",
+
+    "route_not_found": "❌ Ruta no encontrada.",
+    "internal_error": "❌ Ocurrió un error interno.",
+
+    "guild_not_found": "❌ Servidor no encontrado.",
+    "guild_access_denied": "❌ No tienes acceso a este servidor.",
+
+    "invalid_language": "❌ Idioma no válido.",
+
+    "logout_success": "✅ Sesión cerrada correctamente.",
+    "logout_error": "❌ No se pudo cerrar la sesión.",
+
+    "ticket_system_disabled": "❌ El sistema de tickets está desactivado.",
+    "ticket_not_found": "❌ No se encontró el ticket.",
+    "ticket_already_open": "⚠️ Ya tienes un ticket abierto.",
+    "ticket_permission_denied": "❌ No tienes permisos para administrar este ticket.",
+
+    "support_general": "Soporte General",
+    "report": "Reporte",
+    "partnership": "Alianza",
+    "appeal": "Apelación",
+    "other": "Otro",
+
+    "select_category": "Selecciona una categoría.",
+    "select_language": "Selecciona tu idioma.",
+
+    "add_user": "Añadir usuario",
+    "remove_user": "Remover usuario",
+    "claim_ticket": "Reclamar",
+    "close_ticket": "Cerrar",
+
+    "user_added": "✅ El usuario {user} ha sido añadido al ticket.",
+    "user_removed": "✅ El usuario {user} ha sido removido del ticket.",
+
+    "invalid_user_id": "❌ La ID del usuario no es válida.",
+    "ticket_claimed_by": "🛠️ Ticket reclamado por {user}.",
+    "ticket_closed_by": "🔒 Ticket cerrado por {user}.",
+
+    "dashboard": "Dashboard",
+    "home": "Inicio",
+    "security": "Seguridad",
+    "tickets": "Tickets",
+    "forms": "Formularios",
+    "statistics": "Estadísticas",
+    "settings": "Configuración",
+    "logs": "Registros",
+
+    "servers": "Servidores",
+    "members": "Miembros",
+    "online": "En línea",
+    "offline": "Desconectado",
+
+    "save": "Guardar",
+    "saved": "✅ Cambios guardados correctamente.",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "update": "Actualizar",
+    "confirm": "Confirmar",
+
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "login_with_discord": "Iniciar sesión con Discord",
+
+    "statistics_tickets_created": "Tickets creados",
+    "statistics_tickets_closed": "Tickets cerrados",
+    "statistics_tickets_claimed": "Tickets reclamados",
+    "statistics_forms_submitted": "Formularios enviados",
+
+    "panel": "Panel de tickets",
+    "panel_created": "✅ Panel creado correctamente.",
+    "panel_updated": "✅ Panel actualizado correctamente.",
+    "panel_deleted": "✅ Panel eliminado correctamente.",
+
+    "form": "Formulario",
+    "form_created": "✅ Formulario creado correctamente.",
+    "form_submitted": "✅ Formulario enviado correctamente.",
+    "form_accepted": "✅ Formulario aceptado.",
+    "form_rejected": "❌ Formulario rechazado.",
+
+    "logs_ticket_created": "Ticket creado",
+    "logs_ticket_closed": "Ticket cerrado",
+    "logs_ticket_claimed": "Ticket reclamado",
+    "logs_user_added": "Usuario añadido",
+    "logs_user_removed": "Usuario removido",
+
+    "language_spanish": "🇪🇸 Español",
+    "language_english": "🇺🇸 English",
+    "language_portuguese": "🇧🇷 Português",
+    "language_french": "🇫🇷 Français",
+    "language_german": "🇩🇪 Deutsch",
+    "language_italian": "🇮🇹 Italiano"
+}
