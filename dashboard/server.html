@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NR TICKET — Servidor</title>
+
+    <link rel="stylesheet" href="/dashboard/css/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NR TICKET — PANEL DEL SERVIDOR
+         ===================================================== -->
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    <img
+                        src="/dashboard/assets/logo.png"
+                        alt="NR TICKET"
+                        data-selected-guild-icon
+                    >
+                </div>
+
+                <div class="brand-text">
+                    <strong>NR TICKET</strong>
+                    <span>Dashboard</span>
+                </div>
+
+            </div>
+
+            <!-- SERVIDOR -->
+
+            <div class="server-selector">
+
+                <div class="server-current">
+
+                    <img
+                        src="/dashboard/assets/logo.png"
+                        alt=""
+                        data-selected-guild-icon
+                    >
+
+                    <div>
+                        <strong data-selected-guild>
+                            Selecciona un servidor
+                        </strong>
+
+                        <span>
+                            Servidor
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- NAVEGACIÓN -->
+
+            <nav class="sidebar-nav">
+
+                <div class="nav-title">
+                    PRINCIPAL
+                </div>
+
+                <button
+                    class="nav-item"
+                    data-section="home">
+
+                    <span>🏠</span>
+                    <span>Inicio</span>
+
+                </button>
+
+                <button
+                    class="nav-item active"
+                    data-section="tickets">
+
+                    <span>🎫</span>
+                    <span>Tickets</span>
+
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-section="forms">
+
+                    <span>📝</span>
+                    <span>Formularios</span>
+
+                </button>
+
+                <div class="nav-title">
+                    ADMINISTRACIÓN
+                </div>
+
+                <button
+                    class="nav-item"
+                    data-section="logs">
+
+                    <span>📜</span>
+                    <span>Logs</span>
+
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-section="settings">
+
+                    <span>⚙️</span>
+                    <span>Configuración</span>
+
+                </button>
+
+            </nav>
+
+            <!-- USUARIO -->
+
+            <div class="sidebar-user">
+
+                <img
+                    src="https://cdn.discordapp.com/embed/avatars/0.png"
+                    alt=""
+                    data-user-avatar
+                >
+
+                <div class="sidebar-user-info">
+
+                    <strong data-user-name>
+                        Usuario
+                    </strong>
+
+                    <span>
+                        Administrador
+                    </span>
+
+                </div>
+
+                <button
+                    id="logout"
+                    class="logout-button"
+                    title="Cerrar sesión">
+
+                    ⎋
+
+                </button>
+
+            </div>
+
+        </aside>
+
+        <!-- CONTENIDO -->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <header class="topbar">
+
+                <button
+                    id="sidebar-toggle"
+                    class="mobile-menu">
+
+                    ☰
+
+                </button>
+
+                <div class="breadcrumb">
+
+                    <span>NR TICKET</span>
+                    <span>/</span>
+
+                    <strong data-selected-guild>
+                        Servidor
+                    </strong>
+
+                </div>
+
+                <div class="topbar-actions">
+
+                    <button
+                        id="refresh-dashboard"
+                        class="topbar-button"
+                        title="Actualizar">
+
+                        ↻
+
+                    </button>
+
+                    <button
+                        class="topbar-button"
+                        title="Notificaciones">
+
+                        🔔
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 INICIO
+                 ================================================= -->
+
+            <section
+                class="dashboard-page"
+                data-page="home">
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-kicker">
+                            NR TICKET
+                        </span>
+
+                        <h1>
+                            Panel del servidor
+                        </h1>
+
+                        <p>
+                            Administra las funciones de NR TICKET
+                            en tu servidor.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            🎫
+                        </div>
+
+                        <div>
+                            <span>
+                                Paneles
+                            </span>
+
+                            <strong
+                                data-stat-panels>
+                                0
+                            </strong>
+                        </div>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📝
+                        </div>
+
+                        <div>
+                            <span>
+                                Formularios
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+                        </div>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            👥
+                        </div>
+
+                        <div>
+                            <span>
+                                Tickets activos
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+                        </div>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📊
+                        </div>
+
+                        <div>
+                            <span>
+                                Tickets cerrados
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 TICKETS
+                 ================================================= -->
+
+            <section
+                class="dashboard-page active"
+                data-page="tickets">
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-kicker">
+                            🎫 TICKETS
+                        </span>
+
+                        <h1>
+                            Paneles de tickets
+                        </h1>
+
+                        <p>
+                            Crea y administra los paneles
+                            de soporte de tu servidor.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="btn-primary"
+                        data-create-panel>
+
+                        ➕ Crear panel
+
+                    </button>
+
+                </div>
+
+
+                <!-- PANELES -->
+
+                <div
+                    id="ticket-panels"
+                    data-ticket-panels
+                    class="ticket-panels">
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            🎫
+                        </div>
+
+                        <h3>
+                            No tienes paneles creados
+                        </h3>
+
+                        <p>
+                            Crea tu primer panel de tickets
+                            para comenzar.
+                        </p>
+
+                        <button
+                            class="btn-primary"
+                            data-create-panel>
+
+                            ➕ Crear panel
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FORMULARIOS
+                 ================================================= -->
+
+            <section
+                class="dashboard-page"
+                data-page="forms">
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-kicker">
+                            📝 FORMULARIOS
+                        </span>
+
+                        <h1>
+                            Formularios
+                        </h1>
+
+                        <p>
+                            Crea formularios para recopilar
+                            información de tus usuarios.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="btn-primary"
+                        id="create-form">
+
+                        ➕ Crear formulario
+
+                    </button>
+
+                </div>
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        📝
+                    </div>
+
+                    <h3>
+                        No hay formularios
+                    </h3>
+
+                    <p>
+                        Todavía no has creado ningún formulario.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 LOGS
+                 ================================================= -->
+
+            <section
+                class="dashboard-page"
+                data-page="logs">
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-kicker">
+                            📜 LOGS
+                        </span>
+
+                        <h1>
+                            Registro de actividad
+                        </h1>
+
+                        <p>
+                            Consulta las acciones realizadas
+                            por NR TICKET.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="logs-container">
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            📜
+                        </div>
+
+                        <h3>
+                            Sin actividad reciente
+                        </h3>
+
+                        <p>
+                            Los eventos del sistema aparecerán aquí.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CONFIGURACIÓN
+                 ================================================= -->
+
+            <section
+                class="dashboard-page"
+                data-page="settings">
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="page-kicker">
+                            ⚙️ CONFIGURACIÓN
+                        </span>
+
+                        <h1>
+                            Configuración
+                        </h1>
+
+                        <p>
+                            Configura el comportamiento de
+                            NR TICKET para este servidor.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="btn-primary"
+                        id="save-settings">
+
+                        💾 Guardar cambios
+
+                    </button>
+
+                </div>
+
+
+                <!-- TICKETS -->
+
+                <div class="settings-card">
+
+                    <div class="settings-card-header">
+
+                        <div class="settings-icon">
+                            🎫
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Tickets
+                            </h3>
+
+                            <p>
+                                Configuración general del
+                                sistema de tickets.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <strong>
+                                Mensaje privado
+                            </strong>
+
+                            <span>
+                                Enviar confirmación al usuario
+                                cuando cree un ticket.
+                            </span>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                data-setting="ticketDM"
+                                checked
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <strong>
+                                Logs
+                            </strong>
+
+                            <span>
+                                Registrar las acciones de los tickets.
+                            </span>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                data-setting="ticketLogs"
+                                checked
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NOTIFICACIONES -->
+
+                <div class="settings-card">
+
+                    <div class="settings-card-header">
+
+                        <div class="settings-icon">
+                            🔔
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Notificaciones
+                            </h3>
+
+                            <p>
+                                Controla las notificaciones
+                                automáticas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <strong>
+                                Notificaciones por MD
+                            </strong>
+
+                            <span>
+                                Enviar actualizaciones al usuario.
+                            </span>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                data-setting="notifications"
+                                checked
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ALERTAS -->
+
+                <div class="settings-card">
+
+                    <div class="settings-card-header">
+
+                        <div class="settings-icon">
+                            🌎
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Alertas sísmicas
+                            </h3>
+
+                            <p>
+                                Configuración de alertas para
+                                el servidor.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <strong>
+                                Activar alertas
+                            </strong>
+
+                            <span>
+                                Activa el sistema de alertas.
+                            </span>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                data-setting="earthquakeAlerts"
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL — EDITOR DE PANEL
+         ===================================================== -->
+
+    <div
+        class="modal"
+        id="panel-editor-modal">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-container">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="page-kicker">
+                        🎫 NR TICKET
+                    </span>
+
+                    <h2>
+                        Editor de panel
+                    </h2>
+
+                </div>
+
+                <button
+                    id="close-panel-editor"
+                    class="modal-close">
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <!-- CONTENIDO -->
+
+                <div class="editor-section">
+
+                    <h3>
+                        📝 Contenido
+                    </h3>
+
+                    <div class="form-group">
+
+                        <label>
+                            Título
+                        </label>
+
+                        <input
+                            id="panel-title"
+                            type="text"
+                            maxlength="256"
+                            placeholder="🎫 Soporte STEAL NATION"
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+                            Descripción
+                        </label>
+
+                        <textarea
+                            id="panel-description"
+                            maxlength="4096"
+                            placeholder="Selecciona una opción para recibir ayuda."
+                        ></textarea>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label>
+                                Color
+                            </label>
+
+                            <input
+                                id="panel-color"
+                                type="text"
+                                value="#5865F2"
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>
+                                Footer
+                            </label>
+
+                            <input
+                                id="panel-footer"
+                                type="text"
+                                value="NR TICKET"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+                            Imagen
+                        </label>
+
+                        <input
+                            id="panel-image"
+                            type="url"
+                            placeholder="https://..."
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+                            Thumbnail
+                        </label>
+
+                        <input
+                            id="panel-thumbnail"
+                            type="url"
+                            placeholder="https://..."
+                        >
+
+                    </div>
+
+                    <label class="checkbox-option">
+
+                        <input
+                            id="panel-timestamp"
+                            type="checkbox"
+                            checked
+                        >
+
+                        Mostrar timestamp
+
+                    </label>
+
+                </div>
+
+
+                <!-- BOTONES -->
+
+                <div class="editor-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h3>
+                                🔘 Botones
+                            </h3>
+
+                            <p>
+                                Máximo 20 botones.
+                            </p>
+
+                        </div>
+
+                        <button
+                            id="add-button"
+                            class="btn-secondary">
+
+                            ➕ Agregar
+
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="panel-buttons"
+                        class="component-list">
+                    </div>
+
+                </div>
+
+
+                <!-- OPCIONES -->
+
+                <div class="editor-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h3>
+                                📋 Menú de selección
+                            </h3>
+
+                            <p>
+                                Máximo 25 opciones.
+                            </p>
+
+                        </div>
+
+                        <button
+                            id="add-option"
+                            class="btn-secondary">
+
+                            ➕ Agregar
+
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="panel-options"
+                        class="component-list">
+                    </div>
+
+                </div>
+
+
+                <!-- PREVISUALIZACIÓN -->
+
+                <div class="editor-section">
+
+                    <h3>
+                        👁️ Vista previa
+                    </h3>
+
+                    <div id="panel-preview">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn-secondary"
+                    data-close-modal="panel-editor-modal">
+
+                    Cancelar
+
+                </button>
+
+                <button
+                    id="save-panel"
+                    class="btn-primary">
+
+                    💾 Guardar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NOTIFICACIONES -->
+
+    <div id="notifications"></div>
+
+
+    <script src="/dashboard/js/app.js"></script>
+
+</body>
+  </html>
