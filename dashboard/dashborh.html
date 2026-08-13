@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard • NR TICKET</title>
+
+    <link rel="stylesheet" href="/dashboard/css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-logo">👑</div>
+
+                <div>
+                    <strong>NR TICKET</strong>
+                    <span>Dashboard</span>
+                </div>
+            </div>
+
+            <nav class="navigation">
+
+                <a href="/dashboard" class="nav-item active">
+                    🏠
+                    <span>Inicio</span>
+                </a>
+
+                <a href="/dashboard/servers" class="nav-item">
+                    🌐
+                    <span>Mis servidores</span>
+                </a>
+
+                <a href="/dashboard/tickets" class="nav-item">
+                    🎫
+                    <span>Tickets</span>
+                </a>
+
+                <a href="/dashboard/panels" class="nav-item">
+                    📋
+                    <span>Paneles</span>
+                </a>
+
+                <a href="/dashboard/forms" class="nav-item">
+                    📝
+                    <span>Formularios</span>
+                </a>
+
+                <a href="/dashboard/settings" class="nav-item">
+                    ⚙️
+                    <span>Configuración</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="/soporte" class="nav-item">
+                    🛟
+                    <span>Soporte</span>
+                </a>
+
+                <a href="/auth/logout" class="nav-item logout">
+                    🚪
+                    <span>Cerrar sesión</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO -->
+        <main class="dashboard-content">
+
+            <!-- HEADER -->
+            <header class="dashboard-header">
+
+                <div>
+                    <p class="header-small">
+                        PANEL DE CONTROL
+                    </p>
+
+                    <h1>
+                        Inicio
+                    </h1>
+                </div>
+
+                <div class="header-actions">
+
+                    <button class="notification-button">
+                        🔔
+                    </button>
+
+                    <div class="user-profile">
+
+                        <div class="user-avatar">
+                            👤
+                        </div>
+
+                        <div class="user-info">
+                            <strong id="userName">
+                                Usuario
+                            </strong>
+
+                            <span>
+                                Administrador
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- BIENVENIDA -->
+            <section class="welcome-banner">
+
+                <div>
+
+                    <span class="banner-label">
+                        👑 NR TICKET
+                    </span>
+
+                    <h2>
+                        Hola, ¿qué tal?
+                    </h2>
+
+                    <p>
+                        Bienvenido al panel de administración.
+                        Gestiona tus servidores y configura
+                        tu sistema de tickets desde aquí.
+                    </p>
+
+                </div>
+
+                <div class="banner-icon">
+                    🎫
+                </div>
+
+            </section>
+
+
+            <!-- ESTADÍSTICAS -->
+            <section class="stats-grid">
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        🌐
+                    </div>
+
+                    <div>
+                        <span>
+                            Servidores
+                        </span>
+
+                        <strong id="serverCount">
+                            0
+                        </strong>
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        🎫
+                    </div>
+
+                    <div>
+                        <span>
+                            Tickets
+                        </span>
+
+                        <strong id="ticketCount">
+                            0
+                        </strong>
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        📋
+                    </div>
+
+                    <div>
+                        <span>
+                            Paneles
+                        </span>
+
+                        <strong id="panelCount">
+                            0
+                        </strong>
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        📝
+                    </div>
+
+                    <div>
+                        <span>
+                            Formularios
+                        </span>
+
+                        <strong id="formCount">
+                            0
+                        </strong>
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- SERVIDORES -->
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-label">
+                            ADMINISTRACIÓN
+                        </span>
+
+                        <h2>
+                            Mis servidores
+                        </h2>
+                    </div>
+
+                    <a
+                        href="/dashboard/servers"
+                        class="section-button"
+                    >
+                        Ver todos →
+                    </a>
+
+                </div>
+
+
+                <div
+                    id="serversContainer"
+                    class="servers-grid"
+                >
+
+                    <div class="loading-card">
+
+                        <div class="loading-spinner"></div>
+
+                        <p>
+                            Cargando servidores...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ACCIONES RÁPIDAS -->
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-label">
+                            ACCIONES
+                        </span>
+
+                        <h2>
+                            Acceso rápido
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <a
+                        href="/dashboard/servers"
+                        class="quick-card"
+                    >
+
+                        <div class="quick-icon">
+                            🌐
+                        </div>
+
+                        <div>
+                            <strong>
+                                Administrar servidor
+                            </strong>
+
+                            <span>
+                                Configura NR TICKET
+                            </span>
+                        </div>
+
+                        <b>→</b>
+
+                    </a>
+
+
+                    <a
+                        href="/dashboard/panels"
+                        class="quick-card"
+                    >
+
+                        <div class="quick-icon">
+                            🎫
+                        </div>
+
+                        <div>
+                            <strong>
+                                Crear panel
+                            </strong>
+
+                            <span>
+                                Crea un nuevo panel de tickets
+                            </span>
+                        </div>
+
+                        <b>→</b>
+
+                    </a>
+
+
+                    <a
+                        href="/dashboard/forms"
+                        class="quick-card"
+                    >
+
+                        <div class="quick-icon">
+                            📝
+                        </div>
+
+                        <div>
+                            <strong>
+                                Crear formulario
+                            </strong>
+
+                            <span>
+                                Configura solicitudes
+                            </span>
+                        </div>
+
+                        <b>→</b>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script>
+
+        async function loadDashboard() {
+
+            try {
+
+                const response = await fetch('/api/user');
+
+                if (!response.ok) {
+                    window.location.href = '/login';
+                    return;
+                }
+
+                const data = await response.json();
+
+                if (data.user) {
+
+                    document.getElementById('userName')
+                        .textContent =
+                        data.user.username ||
+                        'Usuario';
+
+                }
+
+                if (data.stats) {
+
+                    document.getElementById('serverCount')
+                        .textContent =
+                        data.stats.servers || 0;
+
+                    document.getElementById('ticketCount')
+                        .textContent =
+                        data.stats.tickets || 0;
+
+                    document.getElementById('panelCount')
+                        .textContent =
+                        data.stats.panels || 0;
+
+                    document.getElementById('formCount')
+                        .textContent =
+                        data.stats.forms || 0;
+
+                }
+
+                loadServers();
+
+            } catch (error) {
+
+                console.error(
+                    'Error cargando Dashboard:',
+                    error
+                );
+
+            }
+
+        }
+
+
+        async function loadServers() {
+
+            const container =
+                document.getElementById(
+                    'serversContainer'
+                );
+
+            try {
+
+                const response =
+                    await fetch(
+                        '/api/user/guilds'
+                    );
+
+                if (!response.ok) {
+                    throw new Error(
+                        'No se pudieron cargar los servidores'
+                    );
+                }
+
+                const servers =
+                    await response.json();
+
+                if (!servers.length) {
+
+                    container.innerHTML = `
+                        <div class="empty-card">
+                            <div>🌐</div>
+                            <h3>No hay servidores</h3>
+                            <p>
+                                No tienes servidores disponibles
+                                para administrar.
+                            </p>
+                        </div>
+                    `;
+
+                    return;
+                }
+
+
+                container.innerHTML =
+                    servers
+                    .slice(0, 6)
+                    .map(server => `
+
+                        <article class="server-card">
+
+                            <div class="server-header">
+
+                                <img
+                                    src="${server.icon || '/public/logo.png'}"
+                                    alt=""
+                                    class="server-icon"
+                                >
+
+                                <div>
+
+                                    <h3>
+                                        ${escapeHTML(
+                                            server.name
+                                        )}
+                                    </h3>
+
+                                    <span>
+                                        ${server.memberCount || 0}
+                                        miembros
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="server-status">
+
+                                <span
+                                    class="status-dot
+                                    ${server.canManage
+                                        ? 'online'
+                                        : 'offline'}"
+                                ></span>
+
+                                ${
+                                    server.canManage
+                                    ? 'Puedes administrar'
+                                    : 'Sin permisos'
+                                }
+
+                            </div>
+
+
+                            <div class="server-actions">
+
+                                ${
+                                    server.canManage
+
+                                    ? `
+                                        <a
+                                            href="/dashboard/servers/${server.id}"
+                                            class="manage-button"
+                                        >
+                                            ⚙️ Administrar
+                                        </a>
+                                      `
+
+                                    : `
+                                        <a
+                                            href="${server.invite || '#'}"
+                                            class="invite-button"
+                                        >
+                                            ➕ Invitar
+                                        </a>
+                                      `
+                                }
+
+                            </div>
+
+                        </article>
+
+                    `)
+                    .join('');
+
+            } catch (error) {
+
+                container.innerHTML = `
+                    <div class="error-card">
+
+                        <div>⚠️</div>
+
+                        <h3>
+                            No se pudieron cargar los servidores
+                        </h3>
+
+                        <p>
+                            Inténtalo nuevamente.
+                        </p>
+
+                    </div>
+                `;
+
+                console.error(error);
+
+            }
+
+        }
+
+
+        function escapeHTML(value) {
+
+            return String(value)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+
+        }
+
+
+        loadDashboard();
+
+    </script>
+
+</body>
+  </html>
